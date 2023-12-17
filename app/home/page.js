@@ -28,8 +28,8 @@ export default function Home() {
         gsap.utils.toArray('.reveal-content-1'),
         {
           yPercent: 100,
-          duration: 1,
-          stagger: 0.02,
+          duration: 2,
+          stagger: 0.03,
           ease: 'power3.inOut',
         },
       )

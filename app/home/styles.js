@@ -1,6 +1,6 @@
 'use client'
 
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { media } from 'styles'
 
 export const SectionWrapper = styled.div`
@@ -30,7 +30,7 @@ export const TextWrapper = styled.div`
 
   ${media.desktop`
     max-width: 900px;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
   `}
 `
 export const LinkWrapper = styled.div`
@@ -57,7 +57,7 @@ export const Text = styled.div`
   line-height: 1.2;
   color: ${({ theme }) => `rgb(${theme.text})`};
 
-  ${media.desktop`font-size: 2rem;`}
+  ${media.desktop`font-size: 1.5rem;`}
 
   a {
     font-size: inherit;
