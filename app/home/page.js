@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { Suspense, useRef } from 'react'
 import { Container } from 'styles'
 import {
   ContentWrapper,
@@ -12,8 +12,8 @@ import {
 import Div100vh from 'react-div-100vh'
 import { useIsomorphicLayoutEffect } from 'react-use'
 import gsap from 'gsap'
-import { Suspense } from 'react'
 import Scene from './scene'
+import { CustomLink } from 'components'
 
 export default function Home() {
   const ref = useRef()
@@ -77,34 +77,28 @@ export default function Home() {
               </TextWrapper>
               <LinkWrapper>
                 <div className="overflow">
-                  <a
-                    href="https://www.linkedin.com/in/kyryloren"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <CustomLink
                     className="reveal-content-1"
+                    href="https://www.linkedin.com/in/kyryloren"
                   >
                     LinkedIn
-                  </a>
+                  </CustomLink>
                 </div>
                 <div className="overflow">
-                  <a
-                    href="https://www.instagram.com/kyryloren"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <CustomLink
                     className="reveal-content-1"
+                    href="https://www.instagram.com/kyryloren"
                   >
                     Instagram
-                  </a>
+                  </CustomLink>
                 </div>
                 <div className="overflow">
-                  <a
-                    href="https://www.github.com/kyryloren"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <CustomLink
                     className="reveal-content-1"
+                    href="https://www.github.com/kyryloren"
                   >
                     GitHub
-                  </a>
+                  </CustomLink>
                 </div>
               </LinkWrapper>
             </ContentWrapper>

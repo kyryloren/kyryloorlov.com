@@ -38,22 +38,19 @@ export const LinkWrapper = styled.div`
   gap: 4vw;
   z-index: 999;
   mix-blend-mode: difference;
+  font-size: 1vw;
+  line-height: 1.2;
+  opacity: 0.5;
+  color: ${({ theme }) => `rgb(${theme.text})`};
 
-  ${media.desktop`gap: 3rem;`}
+  ${media.desktop`
+    gap: 3rem;
+    font-size: 1rem;
+  `}
   ${media.thone`
     gap: 0;
     justify-content: space-between;
   `}
-
-  a {
-    font-size: 1vw;
-    line-height: 1.2;
-    opacity: 0.4;
-    color: ${({ theme }) => `rgb(${theme.text})`};
-    text-decoration: none;
-
-    ${media.desktop`font-size: 1rem;`}
-  }
 `
 export const Text = styled.div`
   font-size: 2.5vw;
@@ -66,5 +63,10 @@ export const Text = styled.div`
     font-size: inherit;
     color: ${({ theme }) => `rgb(${theme.text})`};
     text-decoration: underline;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 `

@@ -26,7 +26,7 @@ const capMaterial = new THREE.MeshStandardMaterial({
 })
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28)
 const baubles = [...Array(40)].map(() => ({
-  scale: [0.75, 0.75, 1, 1, 1.25][Math.floor(Math.random() * 5)],
+  scale: [0.9, 0.9, 1, 1, 1.25][Math.floor(Math.random() * 5)],
 }))
 
 function Bauble({
@@ -53,8 +53,8 @@ function Bauble({
   })
   return (
     <RigidBody
-      linearDamping={2}
-      angularDamping={1}
+      linearDamping={1}
+      angularDamping={0.5}
       friction={0.2}
       position={[r(20), r(20) - 25, r(20) - 10]}
       ref={api}
@@ -94,7 +94,7 @@ function Pointer({ vec = new THREE.Vector3() }) {
         y: (mouse.y * viewport.height) / 2,
         z: 0,
       },
-      0.2,
+      0.04,
     )
     ref.current?.setNextKinematicTranslation(vec)
   })
