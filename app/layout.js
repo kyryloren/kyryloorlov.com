@@ -1,5 +1,5 @@
 import { StyledComponentsRegistry } from 'lib'
-// import Script from 'next/script'
+import Script from 'next/script'
 
 const title = 'Kyrylo Orlov | Creative designer and developer'
 const description = `Kyrylo Orlov is an NYC-based designer and developer working on building highly-creative and functional websites, brands, and experiences. Current director at Outer Labs Studio.`
