@@ -64,9 +64,9 @@ export default function RootLayout({ children }) {
         <link
           rel="mask-icon"
           href="/favicon/safari-pinned.tab.svg"
-          color="#121212"
+          color="#141714"
         />
-        <meta name="msapplication-TileColor" content="#121212" />
+        <meta name="msapplication-TileColor" content="#141714" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link
           rel="apple-touch-icon"
@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
-      {/* {process.env.NODE_ENV === 'production' && (
+      {process.env.NODE_ENV === 'production' && (
         <>
           <Script
             async
@@ -110,7 +110,7 @@ export default function RootLayout({ children }) {
             }}
           />
         </>
-      )} */}
+      )}
     </html>
   )
 }
