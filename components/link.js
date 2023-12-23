@@ -4,10 +4,8 @@ import React, { useCallback, useRef } from 'react'
 import styled from 'styled-components'
 import { gsap } from 'gsap'
 import { useIsomorphicLayoutEffect } from 'react-use'
-import { Normal } from 'styles'
 
 const StyledLink = styled.a`
-  ${Normal}
   color: inherit;
   font-size: inherit;
   display: inline-flex;
@@ -18,7 +16,6 @@ const StyledLink = styled.a`
   overflow: hidden;
   height: fit-content;
 `
-
 const StyledSpan = styled.span`
   position: absolute;
 `

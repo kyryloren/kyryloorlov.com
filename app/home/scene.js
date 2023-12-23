@@ -12,7 +12,7 @@ import {
   CylinderCollider,
 } from '@react-three/rapier'
 
-THREE.ColorManagement.legacyMode = false
+THREE.ColorManagement.enabled = true
 const baubleMaterial = new THREE.MeshLambertMaterial({
   color: '#B4B6A0',
   emissive: 'gray',
@@ -125,7 +125,7 @@ const Scene = () => (
       angle={0.2}
       color="gray"
       castShadow
-      shadow-mapSize={[512, 512]}
+      shadow-mapSize={[256, 256]}
     />
     <directionalLight position={[0, 5, -4]} intensity={4} />
     <directionalLight position={[0, -15, -0]} intensity={4} color="gray" />
@@ -136,7 +136,7 @@ const Scene = () => (
       }
     </Physics>
     <Environment files="/adamsbridge.hdr" />
-    <EffectComposer disableNormalPass multisampling={0}>
+    <EffectComposer multisampling={0}>
       <N8AO color="gray" aoRadius={2} intensity={1} />
       <SSAO />
     </EffectComposer>
